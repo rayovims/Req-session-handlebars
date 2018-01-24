@@ -1,0 +1,41 @@
+<div class="row">
+    <div class='col m2'>
+        <a id="access" class="waves-effect waves-light btn-large blue">Refresh</a>
+        <br>
+        <br>
+        <a id="logout" href="/logout" class="waves-effect waves-light btn-large red">Logout</a>
+    </div>
+    <div class="col m2">
+        <div id="names"></div>
+    </div>
+    <div class="col m2">
+        <div id="prices"></div>
+    </div>
+    <div class="col m2">
+        <div id="percent"></div>
+    </div>
+    <div class="col m3">
+        <div class="row">
+            <label>Crypto</label>
+            <input id="coinName">
+        </div>
+        <div class="row">
+            <label>Price</label>
+            <input id="priceAlert">
+        </div>
+        <div class="row">
+            <a id="coinAdded" class="waves-effect waves-light btn black">Submit</a>
+        </div>
+        <div class="row" id="watchList">
+        
+            <div>Welcome {{user.firstname}},</div>
+            <div>Crypto Watch List</div>
+            {{#each user.coins}}
+            <p>Coin: {{this.coinName}}</p>
+             <p>Price: {{this.coinPrice}}</p>
+
+            {{/each}}
+        </div>
+    </div>
+    <div class="col m1"></div>
+</div>
